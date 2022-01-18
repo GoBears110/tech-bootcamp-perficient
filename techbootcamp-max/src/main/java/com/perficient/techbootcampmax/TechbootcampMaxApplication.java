@@ -8,6 +8,7 @@ public class TechbootcampMaxApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(TechbootcampMaxApplication.class, args);
+		
 	}
 
 }
