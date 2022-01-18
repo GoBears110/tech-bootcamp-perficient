@@ -3,18 +3,31 @@ package com.perficient.techbootcampmax;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
 
 public class MovieTest {
+	
+	Movie testMovie;
+	
+	@BeforeEach
+	void setUp() {
+		testMovie = new Movie();
+	}
+	
 	@Test
-	void getTitleTest() {
-		Movie m = new Movie();
-		assertEquals("In Bruges", m.getTitle());
+	void emptyConTest() {
+		assertEquals("In Bruges", testMovie.getTitle());
 	}
 	
 	@Test
 	void setTitleTest() {
-		Movie m = new Movie();
-		m.setDirector("Martin McDonaugh");
-		assertEquals("Martin McDonaugh", m.getDirector());
+		testMovie.setTitle("Sicario");
+		assertEquals("Sicario", testMovie.getTitle());
+	}
+	
+	@Test
+	void setDirTest() {
+		testMovie.setDirector("Martin McDonaugh");
+		assertEquals("Martin McDonaugh", testMovie.getDirector());
 	}
 }
